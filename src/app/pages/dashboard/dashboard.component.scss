@@ -509,6 +509,40 @@
                                 }
                             }
                             .dropmenu{
+                                display: inline-block;
+                                position: relative;
+                                width: 150px;
+                                display: flex;
+                                flex-direction: row;
+                                // align-items: center;
+                                justify-content: end;    
+                                .dropdown{
+                                    position: absolute;
+                                    height: 250px;
+                                    width: 110px;
+                                    background: rgb(255, 255, 255);
+                                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+                                    border-radius: 0px 0px 10px 10px;
+                                    border: 1px solid rgba(0, 0, 0, 0.1);
+                                    cursor: pointer;
+                                    overflow-y: scroll;
+                                    scrollbar-color: black white;
+                                    scrollbar-width:none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-top: 20px;
+                                    .monthss{
+                                        padding-left: 10px;
+                                        padding-bottom: 10px;
+                                        padding-top: 10px;
+                                        // padding: 4px;
+                                        font-size: 16px;
+                                    }
+                                    .monthss:hover{
+                                        background: rgba(0, 0, 0, 0.7);
+                                        color: white;
+                                    }
+                                }
                                 .month{
                                     font-size: 20px;
                                     font-weight: 300;

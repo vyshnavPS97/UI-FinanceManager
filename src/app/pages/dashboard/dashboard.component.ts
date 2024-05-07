@@ -9,6 +9,7 @@ import { Component,OnInit } from '@angular/core';
 export class DashboardComponent {
 
   barHeight = '100%'
+  dropDown:boolean = false
   dataForChart = [
     {
       progress:'50%',
@@ -112,8 +113,20 @@ export class DashboardComponent {
     }
   ]
 
+  calender = ['January', 'February', 'march', 'April', 'May', 'june', 'july', 'August', 'September', 'October', 'November', 'December']
+  defaultMonth = 'February'
   ngOnInit(){
     console.log(this.dataForChart);
     
+  }
+
+  openDropDown(){
+    this.dropDown = !this.dropDown
+    console.log(this.dropDown);
+    
+  }
+  onClickMonth(month:any){
+    this.defaultMonth = month
+    this.dropDown = !this.dropDown
   }
 }

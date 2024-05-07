@@ -225,7 +225,12 @@
 
                             </div>
                             <div class="dropmenu">
-                                <span class="month">February</span> <i class="fa-solid fa-caret-down"></i>
+                                <span class="month">{{defaultMonth}}</span> <i class="fa-solid fa-caret-down" (click)="openDropDown()"></i>
+                                <div class="dropdown" *ngIf="dropDown">
+                                    <div class="monthss" *ngFor="let i of calender" (click)="onClickMonth(i)">
+                                        {{i}}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="chartSection">
